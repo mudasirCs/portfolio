@@ -4685,3 +4685,98 @@ button {
 [data-theme="light"] .hero-bg-orb:nth-child(4) {
     background: radial-gradient(circle, rgba(218, 165, 32, 0.12) 0%, transparent 70%) !important;
 }
+/* ===================================
+   REFINED "SOBER GOLD" PALETTE
+   More elegant, less saturated gold
+   =================================== */
+
+/* Hero Title - Sober Gold */
+[data-theme="light"] .hero-title span,
+[data-theme="light"] .section-title,
+[data-theme="light"] .nav-logo {
+    background: linear-gradient(135deg, #a67c00 0%, #bf9b30 50%, #a67c00 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+/* Primary Buttons - Elegant Gold Gradient */
+[data-theme="light"] .btn-primary {
+    background: linear-gradient(135deg, #c5a059 0%, #b08d55 100%) !important;
+    box-shadow: 0 4px 15px rgba(176, 141, 85, 0.3) !important;
+    border: 1px solid rgba(176, 141, 85, 0.2) !important;
+}
+
+[data-theme="light"] .btn-primary:hover {
+    background: linear-gradient(135deg, #d4af67 0%, #bd985e 100%) !important;
+    box-shadow: 0 6px 20px rgba(176, 141, 85, 0.4) !important;
+}
+
+/* Timeline Badge Current - Sober Color */
+[data-theme="light"] .timeline-badge.current {
+    background: linear-gradient(135deg, #c5a059, #a67c00) !important;
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.4) !important;
+    border: 1px solid rgba(197, 160, 89, 0.3) !important;
+}
+
+/* Nav CTA - Matching Sober Gold */
+[data-theme="light"] .nav-cta {
+    background: linear-gradient(135deg, #c5a059, #b08d55) !important;
+    box-shadow: 0 4px 15px rgba(176, 141, 85, 0.2) !important;
+}
+
+[data-theme="light"] .nav-cta:hover {
+    background: linear-gradient(135deg, #d4af67, #bd985e) !important;
+    box-shadow: 0 6px 20px rgba(176, 141, 85, 0.3) !important;
+}
+
+/* ===================================
+   CONSISTENT SOBER GOLD FOR ALL ELEMENTS
+   =================================== */
+
+/* Stat Numbers */
+[data-theme="light"] .stat-number {
+    background: linear-gradient(135deg, #a67c00, #c5a059) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+/* Scroll Indocator */
+[data-theme="light"] .scroll-dot {
+    background: #a67c00 !important;
+}
+
+[data-theme="light"] .scroll-indicator {
+    border-color: rgba(166, 124, 0, 0.3) !important;
+}
+
+/* Contact Links & Icons */
+[data-theme="light"] .contact-icon,
+[data-theme="light"] .contact-card a,
+[data-theme="light"] .nav-links a:hover,
+[data-theme="light"] .nav-links a.active,
+[data-theme="light"] .project-link,
+[data-theme="light"] .status-code,
+[data-theme="light"] .method.get {
+    color: #a67c00 !important;
+}
+
+[data-theme="light"] .contact-card a:hover,
+[data-theme="light"] .project-link:hover {
+    color: #c5a059 !important;
+}
+
+/* Section Underlines */
+[data-theme="light"] .section-title::after {
+    background: linear-gradient(90deg, transparent, #a67c00, #c5a059, #a67c00, transparent) !important;
+}
+
+/* Status Badges & Tags */
+[data-theme="light"] .status-badge,
+[data-theme="light"] .method.get {
+    background: rgba(166, 124, 0, 0.1) !important;
+    border-color: rgba(166, 124, 0, 0.2) !important;
+}

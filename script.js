@@ -190,7 +190,7 @@ function initThemeToggle() {
             window.particles.forEach(p => {
                 p.color = newTheme === 'dark'
                     ? `rgba(139, 92, 246, ${Math.random() * 0.5 + 0.1})`
-                    : `rgba(184, 134, 11, ${Math.random() * 0.5 + 0.2})`;
+                    : `rgba(166, 124, 0, ${Math.random() * 0.5 + 0.2})`;
             });
         }
     });
@@ -228,7 +228,7 @@ function initParticles() {
             const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
             this.color = isDark
                 ? `rgba(139, 92, 246, ${this.opacity})`
-                : `rgba(184, 134, 11, ${this.opacity * 0.8})`;
+                : `rgba(166, 124, 0, ${this.opacity * 0.8})`;
         }
 
         update() {
@@ -265,7 +265,7 @@ function initParticles() {
                     const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
                     ctx.strokeStyle = isDark
                         ? `rgba(139, 92, 246, ${opacity})`
-                        : `rgba(184, 134, 11, ${opacity * 0.8})`;
+                        : `rgba(166, 124, 0, ${opacity * 0.8})`;
                     ctx.lineWidth = 1;
                     ctx.beginPath();
                     ctx.moveTo(particles[i].x, particles[i].y);
