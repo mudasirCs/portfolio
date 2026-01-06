@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Mudasir Durrani - Full Stack Developer, DevOps Engineer & ML Enthusiast. Building scalable solutions with modern technologies.">
+    <meta name="keywords"
+        content="Mudasir Durrani, Full Stack Developer, DevOps Engineer, MERN, Django, Kubernetes, Machine Learning">
+    <meta name="author" content="Mudasir Durrani">
+    <title>Mudasir Durrani | Full Stack Developer & DevOps Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-text">MD</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="theme-icon sun">☀️</span>
+                <span class="theme-icon moon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <canvas id="particleCanvas" class="particle-canvas"></canvas>
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1 class="hero-title">Mudasir Durrani</h1>
+            <div class="hero-subtitle">
+                <span class="typing-text" id="typingText"></span>
+                <span class="cursor">|</span>
+            </div>
+            <p class="hero-description">
+                Building scalable solutions with modern technologies.<br>
+                From full-stack applications to cloud infrastructure.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+            <div class="hero-scroll">
+                <a href="#about" class="scroll-indicator">
+                    <span class="mouse"></span>
+                    <span class="scroll-text">Scroll Down</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="profile-placeholder">
+                            <span class="initials">MD</span>
+                        </div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">4+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Roles Mastered</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Computer Scientist & Problem Solver</h3>
+                    <p>
+                        I'm a <strong>Computer Science graduate from FAST University (2022)</strong> with a passion for
+                        building elegant solutions to complex problems. My journey has taken me through the entire
+                        software development lifecycle—from crafting pixel-perfect UIs to architecting robust backend
+                        systems and orchestrating cloud infrastructure.
+                    </p>
+                    <p>
+                        Starting as a <strong>Full Stack MERN Developer</strong>, I built dynamic web applications
+                        with React and Node.js. I then expanded into <strong>Django and PHP development</strong>,
+                        gaining valuable experience with enterprise systems like Moodle. Today, I focus on
+                        <strong>DevOps engineering</strong>, automating deployments with Kubernetes and embracing
+                        the Linux ecosystem I love.
+                    </p>
+                    <p>
+                        My final year project, <strong>Scribe</strong>, combined my love for AI/ML with practical
+                        problem-solving—an intelligent email assistant using Transformer models. I've also explored
+                        blockchain development with Go, because why not reinvent the wheel occasionally?
+                    </p>
+                    <div class="about-highlights">
+                        <span class="highlight-tag">🎓 FAST University CS Graduate</span>
+                        <span class="highlight-tag">🔧 Full Stack → DevOps Evolution</span>
+                        <span class="highlight-tag">🤖 ML/AI Enthusiast</span>
+                        <span class="highlight-tag">🐧 Linux Advocate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <p class="section-subtitle">A diverse toolkit built through hands-on experience</p>
+
+            <div class="skills-grid">
+                <!-- Frontend -->
+                <div class="skill-card" data-category="frontend">
+                    <div class="skill-icon">🎨</div>
+                    <h3 class="skill-category">Frontend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">React Native</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">UI/UX Design</span>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="skill-card" data-category="backend">
+                    <div class="skill-icon">⚙️</div>
+                    <h3 class="skill-category">Backend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">Go</span>
+                        <span class="skill-tag">REST APIs</span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="skill-card" data-category="database">
+                    <div class="skill-icon">🗄️</div>
+                    <h3 class="skill-category">Databases</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">Database Design</span>
+                    </div>
+                </div>
+
+                <!-- DevOps -->
+                <div class="skill-card" data-category="devops">
+                    <div class="skill-icon">🚀</div>
+                    <h3 class="skill-category">DevOps & Cloud</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Nginx</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Shell Scripting</span>
+                    </div>
+                </div>
+
+                <!-- Mobile -->
+                <div class="skill-card" data-category="mobile">
+                    <div class="skill-icon">📱</div>
+                    <h3 class="skill-category">Mobile</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React Native</span>
+                        <span class="skill-tag">Android (Java)</span>
+                        <span class="skill-tag">Mobile UI/UX</span>
+                    </div>
+                </div>
+
+                <!-- ML/AI -->
+                <div class="skill-card" data-category="ml">
+                    <div class="skill-icon">🧠</div>
+                    <h3 class="skill-category">ML & AI</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Transformers</span>
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Text Summarization</span>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-card" data-category="tools">
+                    <div class="skill-icon">🛠️</div>
+                    <h3 class="skill-category">Tools & Practices</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Agile/Scrum</span>
+                        <span class="skill-tag">Jira</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Vim</span>
+                    </div>
+                </div>
+
+                <!-- Other -->
+                <div class="skill-card" data-category="other">
+                    <div class="skill-icon">⛓️</div>
+                    <h3 class="skill-category">Blockchain</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Go</span>
+                        <span class="skill-tag">Distributed Systems</span>
+                        <span class="skill-tag">Cryptography</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Journey</h2>
+            <p class="section-subtitle">My evolution as a software engineer</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">2025 - Present</span>
+                            <span class="timeline-badge current">Current</span>
+                        </div>
+                        <h3 class="timeline-title">DevOps Engineer & Backend Developer</h3>
+                        <p class="timeline-description">
+                            Leading infrastructure automation and deployment pipelines. Managing Kubernetes clusters,
+                            implementing CI/CD workflows, and maintaining backend services with Django.
+                            Championing DevOps best practices across the engineering team.
+                        </p>
+                        <div class="timeline-tech">
+                            <span>Kubernetes</span>
+                            <span>Docker</span>
+                            <span>Django</span>
+                            <span>Linux</span>
+                            <span>CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">2024 - 2025</span>
+                        </div>
+                        <h3 class="timeline-title">Backend Developer (Django & PHP)</h3>
+                        <p class="timeline-description">
+                            Developed and maintained backend systems using Django and PHP. Worked extensively
+                            with Moodle LMS, gaining expertise in legacy codebases and enterprise-grade systems.
+                            Implemented RESTful APIs and database optimizations.
+                        </p>
+                        <div class="timeline-tech">
+                            <span>Django</span>
+                            <span>PHP</span>
+                            <span>Moodle</span>
+                            <span>PostgreSQL</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">2022 - 2024</span>
+                        </div>
+                        <h3 class="timeline-title">Full Stack MERN Developer</h3>
+                        <p class="timeline-description">
+                            Built dynamic web applications using MongoDB, Express.js, React, and Node.js.
+                            Designed responsive UIs, implemented RESTful APIs, and managed NoSQL databases.
+                            Collaborated closely with UI/UX teams to deliver exceptional user experiences.
+                        </p>
+                        <div class="timeline-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Express.js</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">2022</span>
+                            <span class="timeline-badge education">Education</span>
+                        </div>
+                        <h3 class="timeline-title">BS Computer Science - FAST University</h3>
+                        <p class="timeline-description">
+                            Graduated with a strong foundation in algorithms, data structures, and software engineering.
+                            Completed Final Year Project "Scribe" - an AI-powered email assistant using Transformer
+                            models
+                            for intelligent task extraction and summarization.
+                        </p>
+                        <div class="timeline-tech">
+                            <span>Algorithms</span>
+                            <span>Data Structures</span>
+                            <span>ML/AI</span>
+                            <span>React Native</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Showcasing my most impactful work</p>
+
+            <div class="projects-grid">
+                <!-- Scribe Project -->
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-placeholder scribe-bg">
+                            <span class="project-emoji">📧</span>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-type">Final Year Project</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Scribe</h3>
+                        <p class="project-description">
+                            An intelligent mobile application that revolutionizes email management using AI.
+                            Scribe reads your emails, extracts actionable items using Transformer-based
+                            abstractive summarization, and automatically creates to-do lists and calendar events.
+                        </p>
+                        <div class="project-features">
+                            <span>🤖 AI-Powered Summarization</span>
+                            <span>📅 Auto Calendar Events</span>
+                            <span>✅ Smart To-Do Generation</span>
+                            <span>🔔 Intelligent Alarms</span>
+                        </div>
+                        <div class="project-tech">
+                            <span>React Native</span>
+                            <span>Transformers</span>
+                            <span>NLP</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blockchain Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder blockchain-bg">
+                            <span class="project-emoji">⛓️</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Go Blockchain</h3>
+                        <p class="project-description">
+                            A fully functional blockchain implementation built from scratch in Go.
+                            Features proof-of-work consensus, transaction handling, and a distributed
+                            network architecture demonstrating core blockchain concepts.
+                        </p>
+                        <div class="project-tech">
+                            <span>Go</span>
+                            <span>Cryptography</span>
+                            <span>Distributed Systems</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MERN Applications -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder mern-bg">
+                            <span class="project-emoji">🌐</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">MERN Stack Applications</h3>
+                        <p class="project-description">
+                            Collection of full-stack web applications built during my MERN development
+                            tenure. Includes e-commerce platforms, dashboards, and real-time applications
+                            with modern UI/UX designs.
+                        </p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Express.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DevOps Infrastructure -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder devops-bg">
+                            <span class="project-emoji">🚀</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Infrastructure Automation</h3>
+                        <p class="project-description">
+                            Kubernetes-based deployment pipelines and infrastructure-as-code solutions.
+                            Automated CI/CD workflows, container orchestration, and cloud-native
+                            application deployments.
+                        </p>
+                        <div class="project-tech">
+                            <span>Kubernetes</span>
+                            <span>Docker</span>
+                            <span>CI/CD</span>
+                            <span>Linux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-subtitle">I'm always open to discussing new opportunities and interesting projects</p>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <a href="mailto:mudasir@example.com">mudasir@example.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">💼</div>
+                        <h3>LinkedIn</h3>
+                        <a href="https://linkedin.com/in/mudasirdurrani" target="_blank"
+                            rel="noopener">linkedin.com/in/mudasirdurrani</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">🐙</div>
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/mudasirdurrani" target="_blank"
+                            rel="noopener">github.com/mudasirdurrani</a>
+                    </div>
+                </div>
+
+                <div class="contact-cta">
+                    <p>Looking for a versatile engineer who can build full-stack applications, manage cloud
+                        infrastructure, and bring AI/ML expertise to the table?</p>
+                    <a href="mailto:mudasir@example.com" class="btn btn-primary btn-large">Say Hello 👋</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    Crafted by <strong>Mudasir Durrani</strong>
+                </p>
+                <p class="footer-copyright">
+                    © 2026 All Rights Reserved
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
