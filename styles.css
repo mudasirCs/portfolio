@@ -1024,6 +1024,22 @@ button {
     background: linear-gradient(135deg, #4a1d2f 0%, #831843 50%, #9d174d 100%);
 }
 
+.ecommerce-bg {
+    background: linear-gradient(135deg, #3d2914 0%, #78350f 50%, #92400e 100%);
+}
+
+.ml-bg {
+    background: linear-gradient(135deg, #1e1b4b 0%, #3730a3 50%, #4f46e5 100%);
+}
+
+.llm-bg {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.monitoring-bg {
+    background: linear-gradient(135deg, #064e3b 0%, #047857 50%, #059669 100%);
+}
+
 .project-emoji {
     font-size: 4rem;
     filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.3));
