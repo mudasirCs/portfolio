@@ -190,7 +190,7 @@ function initThemeToggle() {
             window.particles.forEach(p => {
                 p.color = newTheme === 'dark'
                     ? `rgba(139, 92, 246, ${Math.random() * 0.5 + 0.1})`
-                    : `rgba(124, 58, 237, ${Math.random() * 0.3 + 0.1})`;
+                    : `rgba(184, 134, 11, ${Math.random() * 0.5 + 0.2})`;
             });
         }
     });
@@ -228,7 +228,7 @@ function initParticles() {
             const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
             this.color = isDark
                 ? `rgba(139, 92, 246, ${this.opacity})`
-                : `rgba(124, 58, 237, ${this.opacity * 0.6})`;
+                : `rgba(184, 134, 11, ${this.opacity * 0.8})`;
         }
 
         update() {
@@ -265,7 +265,7 @@ function initParticles() {
                     const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
                     ctx.strokeStyle = isDark
                         ? `rgba(139, 92, 246, ${opacity})`
-                        : `rgba(124, 58, 237, ${opacity * 0.6})`;
+                        : `rgba(184, 134, 11, ${opacity * 0.8})`;
                     ctx.lineWidth = 1;
                     ctx.beginPath();
                     ctx.moveTo(particles[i].x, particles[i].y);
@@ -664,3 +664,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+// Hide scroll indicator after 5 seconds
+setTimeout(() => {
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    if (scrollIndicator) {
+        scrollIndicator.style.transition = 'opacity 1s ease-out';
+        scrollIndicator.style.opacity = '0';
+        setTimeout(() => {
+            scrollIndicator.style.display = 'none';
+        }, 1000);
+    }
+}, 5000);
