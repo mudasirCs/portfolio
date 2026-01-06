@@ -4780,3 +4780,35 @@ button {
     background: rgba(166, 124, 0, 0.1) !important;
     border-color: rgba(166, 124, 0, 0.2) !important;
 }
+
+/* Fix text color for timeline badge in light theme */
+[data-theme="light"] .timeline-badge.current {
+    color: #fff !important;
+    text-shadow: 0 1px 2px rgba(166, 124, 0, 0.3);
+}
+
+/* Ensure Primary Buttons have white text on gold background */
+[data-theme="light"] .btn-primary {
+    color: #fff !important;
+    text-shadow: 0 1px 2px rgba(166, 124, 0, 0.3);
+}
+
+/* Ensure Nav CTA has white text */
+[data-theme="light"] .nav-cta {
+    color: #fff !important;
+}
+
+/* Fix Hero Title Gradient (was targeting span incorrectly) */
+[data-theme="light"] .hero-title {
+    background: linear-gradient(135deg, #a67c00 0%, #bf9b30 50%, #a67c00 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important; /* Fallback */
+    text-shadow: none !important;
+}
+
+/* Ensure large buttons also get the correct text color */
+[data-theme="light"] .btn-large {
+    color: #fff !important;
+}
