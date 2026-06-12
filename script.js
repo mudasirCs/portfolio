@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initRainbowCursor();
     initBouncyElements();
     initSparkleHover();
+    initGitHubContributions();
 });
 
 // Typing Animation
@@ -27,10 +28,9 @@ function initTypingAnimation() {
     const typingElement = document.getElementById('typingText');
     const roles = [
         'Full Stack Developer',
-        'DevOps Engineer',
-        'Backend Developer',
-        'ML Enthusiast',
-        'Linux Advocate'
+        'MERN Stack Developer',
+        'React / Next.js Developer',
+        'Node.js Developer'
     ];
 
     let roleIndex = 0;
@@ -105,6 +105,7 @@ function initScrollReveal() {
         .timeline-item, 
         .project-card, 
         .contact-card,
+        .github-card,
         .about-content,
         .section-title,
         .section-subtitle
@@ -676,3 +677,95 @@ setTimeout(() => {
         }, 1000);
     }
 }, 5000);
+
+// GitHub contribution heatmap (fetches GitHub profile HTML — same graph as github.com)
+const GITHUB_USERNAME = 'mudasirCs';
+const GITHUB_CALENDAR_PROXY = `https://api.bloggify.net/gh-calendar/?username=${GITHUB_USERNAME}`;
+
+function initGitHubContributions() {
+    const container = document.getElementById('githubCalendar');
+    if (!container) return;
+
+    fetch(GITHUB_CALENDAR_PROXY)
+        .then((res) => {
+            if (!res.ok) throw new Error('Failed to fetch GitHub calendar');
+            return res.text();
+        })
+        .then((html) => renderGitHubHeatmap(container, html))
+        .catch(() => {
+            container.innerHTML = `
+                <p class="github-error">
+                    Couldn't load the GitHub graph.
+                    <a href="https://github.com/${GITHUB_USERNAME}" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+                </p>`;
+        });
+}
+
+function renderGitHubHeatmap(container, html) {
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+    const section = doc.querySelector('.js-yearly-contributions');
+
+    if (!section) {
+        throw new Error('GitHub calendar markup missing');
+    }
+
+    section.querySelectorAll('tool-tip').forEach((tip) => {
+        const targetId = tip.getAttribute('for');
+        const label = tip.textContent.trim();
+        if (!targetId || !label) return;
+        const cell = section.querySelector(`#${CSS.escape(targetId)}`);
+        if (cell) cell.setAttribute('title', label);
+    });
+
+    section.querySelectorAll('script, tool-tip, a, .sr-only').forEach((el) => el.remove());
+
+    const heading = section.querySelector('#js-contribution-activity-description');
+    const table = section.querySelector('table.ContributionCalendar-grid');
+    const scrollWrap = table?.closest('div[style*="overflow"]');
+
+    container.innerHTML = '';
+
+    if (heading) {
+        const total = document.createElement('p');
+        total.className = 'github-heatmap-total';
+        const text = heading.textContent.replace(/\s+/g, ' ').trim();
+        const match = text.match(/^([\d,]+)\s+contributions/i);
+        total.innerHTML = match
+            ? `<strong>${match[1]}</strong> contributions in the last year`
+            : text;
+        container.appendChild(total);
+    }
+
+    if (scrollWrap) {
+        const wrap = document.createElement('div');
+        wrap.className = 'github-heatmap-scroll';
+        wrap.appendChild(document.importNode(scrollWrap, true));
+        container.appendChild(wrap);
+    }
+
+    container.appendChild(buildHeatmapLegend());
+}
+
+function buildHeatmapLegend() {
+    const legend = document.createElement('div');
+    legend.className = 'github-heatmap-legend';
+    legend.setAttribute('aria-hidden', 'true');
+
+    const less = document.createElement('span');
+    less.textContent = 'Less';
+    legend.appendChild(less);
+
+    for (let level = 0; level <= 4; level += 1) {
+        const swatch = document.createElement('span');
+        swatch.className = 'legend-swatch';
+        swatch.dataset.level = String(level);
+        swatch.style.background = `var(--gh-day-${level === 0 ? 'bg' : level})`;
+        legend.appendChild(swatch);
+    }
+
+    const more = document.createElement('span');
+    more.textContent = 'More';
+    legend.appendChild(more);
+
+    return legend;
+}
